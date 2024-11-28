@@ -1,0 +1,35 @@
+services:
+    mysql:
+        container_name: ${MYSQL_CONTAINER_NAME}
+        image: mariadb:10.10
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: secret
+            MYSQL_DATABASE: packing
+        hostname: mysql
+        volumes:
+            - "packing_db:/var/lib/mysql"
+
+    app:
+        container_name: ${APP_CONTAINER_NAME}
+        image: ${APP_CONTAINER_NAME}
+        depends_on:
+            - mysql
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ./:/app
+
+    adminer:
+        container_name: ${ADMINER_CONTAINER_NAME}
+        image: adminer:latest
+        depends_on:
+            - mysql
+        ports:
+            - "8080:8080"
+
+volumes:
+    packing_db:
+        external: true

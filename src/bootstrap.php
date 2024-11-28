@@ -11,7 +11,7 @@ $config->setNamingStrategy(new UnderscoreNamingStrategy());
 
 return EntityManager::create([
     'driver' => 'pdo_mysql',
-    'host' => 'shipmonk-packing-mysql',
+    'host' => 'mysql',
     'user' => 'root',
     'password' => 'secret',
     'dbname' => 'packing',
