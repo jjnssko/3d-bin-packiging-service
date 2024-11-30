@@ -25,5 +25,6 @@ Thumbs.db
 
 ###> project ###
 /.env
+/.env.local
 /vendor
 ###< project ###
