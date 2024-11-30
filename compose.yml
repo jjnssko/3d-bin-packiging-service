@@ -21,6 +21,7 @@ services:
             dockerfile: Dockerfile
         volumes:
             - ./:/app
+            - ./xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
 
     adminer:
         container_name: ${ADMINER_CONTAINER_NAME}

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+php -d display_errors=On \
+    -d xdebug.mode=debug \
+    -d xdebug.start_with_request=yes \
+    -d xdebug.client_host=host.docker.internal \
+    -d xdebug.idekey=PHPSTORM \
+    "$@"

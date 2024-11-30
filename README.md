@@ -8,6 +8,9 @@
 ### run
 - `php run.php "$(cat sample.json)"`
 
+### run with xdebug
+- `./console-xdbg run.php "$(cat sample.json)"`
+
 ### adminer
 - Open `http://localhost:8080/?server=mysql&username=root&db=packing`
 - Password: secret
