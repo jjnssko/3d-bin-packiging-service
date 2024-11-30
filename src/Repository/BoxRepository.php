@@ -12,17 +12,10 @@ use App\Normalizer\BoxNormalizer;
  */
 class BoxRepository extends BaseRepository
 {
-    /** @return array<int, array<string, float>> */
-    public function getNormalizedDataForPack(): array
+    /** @return Box[] */
+    public function findAllBoxes(): array
     {
         /** @var Box[] $boxes */
-        $boxObjects = $this->findAll();
-
-        $boxes = [];
-        foreach ($boxObjects as $box) {
-            $boxes[] = BoxNormalizer::normalizeForClient($box);
-        }
-
-        return $boxes;
+        return $this->findAll();
     }
 }

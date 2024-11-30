@@ -16,8 +16,12 @@ class PackagingResult
     #[ORM\Column(type: Types::INTEGER)]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::TEXT)]
-    private string $response;
+    #[ORM\ManyToOne(targetEntity: Box::class)]
+    #[ORM\JoinColumn(name: 'box_id', referencedColumnName: 'id')]
+    private Box|null $box = null;
+
+    #[ORM\Column(type: Types::JSON)]
+    private array $response;
 
     #[ORM\Column(type: Types::TEXT)]
     private string $inputHash;
@@ -25,9 +29,8 @@ class PackagingResult
     #[ORM\Column(type: Types::JSON)]
     private array $inputData;
 
-    #[ORM\ManyToOne(targetEntity: Box::class)]
-    #[ORM\JoinColumn(name: 'box_id', referencedColumnName: 'id')]
-    private Box|null $box = null;
+    #[ORM\Column(type: Types::JSON, nullable: true)]
+    private ?array $error = null;
 
     #[ORM\Column(type: "datetime")]
     private \DateTimeInterface $createdAt;
@@ -42,18 +45,23 @@ class PackagingResult
         return $this->id;
     }
 
-    public function setId(?int $id): PackagingResult
+    public function getBox(): ?Box
     {
-        $this->id = $id;
+        return $this->box;
+    }
+
+    public function setBox(?Box $box): PackagingResult
+    {
+        $this->box = $box;
         return $this;
     }
 
-    public function getResponse(): string
+    public function getResponse(): array
     {
         return $this->response;
     }
 
-    public function setResponse(string $response): PackagingResult
+    public function setResponse(array $response): PackagingResult
     {
         $this->response = $response;
         return $this;
@@ -70,12 +78,6 @@ class PackagingResult
         return $this;
     }
 
-    public function setInputHashFromInputData(array $inputData): PackagingResult
-    {
-        $this->inputHash = $this->generateInputHash($inputData);
-        return $this;
-    }
-
     public function getInputData(): array
     {
         return $this->inputData;
@@ -84,17 +86,18 @@ class PackagingResult
     public function setInputData(array $inputData): PackagingResult
     {
         $this->inputData = $inputData;
+        $this->inputHash = self::generateInputHash($inputData);
         return $this;
     }
 
-    public function getBox(): ?Box
+    public function getError(): ?array
     {
-        return $this->box;
+        return $this->error;
     }
 
-    public function setBox(?Box $box): PackagingResult
+    public function setError(?array $error): PackagingResult
     {
-        $this->box = $box;
+        $this->error = $error;
         return $this;
     }
 

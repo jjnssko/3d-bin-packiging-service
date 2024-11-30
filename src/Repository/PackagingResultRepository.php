@@ -14,17 +14,6 @@ class PackagingResultRepository extends BaseRepository
 {
     public function findByInputHash(string $inputHash): ?PackagingResult
     {
-        return $this->findOneBy(['inputHash' => $inputHash]);
-    }
-
-    public function storeResponse(string $response, array $inputData, ?Box $box): void
-    {
-        $packagingResult = (new PackagingResult())
-            ->setResponse($response)
-            ->setInputHashFromInputData($inputData)
-            ->setInputData($inputData)
-            ->setBox($box);
-
-        $this->save($packagingResult);
+        return $this->findOneBy(['inputHash' => $inputHash, 'error' => null]);
     }
 }
