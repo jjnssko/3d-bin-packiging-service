@@ -22,12 +22,13 @@
 - [x] Ošetřit rate limit API - uložit výsledky do databáze pro opětovné použití
 
 ## 4. Validace a Výpočet
-- [ ] Implementovat metodu pro výpočet nejvhodnějšího boxu
-    - Použít API pro výpočet, nebo fallback na jednoduchý výpočet při výpadku API
+- [x] Implementovat metodu pro výpočet nejvhodnějšího boxu
+    - Použít API pro výpočet
     - Validovat vstupy (produkty a konfigurace boxů)
+- [ ] Přidat fallback na jednoduchý výpočet při výpadku API
 
 ## 5. Práce s Doctrine Cache
-- [ ] Implementovat cache pro výsledky výpočtu (uložení do databáze)
+- [x] Implementovat cache pro výsledky výpočtu (uložení do databáze)
     - Zajistit, že se nevolá API pro stejné vstupy dvakrát
     - Použít Doctrine ORM pro uložení a načítání dat
 
@@ -38,11 +39,11 @@
 - [ ] Otestovat chování aplikace při výpadku externího API
 
 ## 7. Optimalizace a Zabezpečení
-- [ ] Ošetřit všechny výjimky a chyby při práci s API
-- [ ] Zabezpečit přístup k API klíčům a citlivým údajům v `.env`
-- [ ] Zajistit, že kód je testovatelný a snadno udržovatelný
+- [x] Ošetřit všechny výjimky a chyby při práci s API
+- [x] Zabezpečit přístup k API klíčům a citlivým údajům v `.env`
+- [x] Zajistit, že kód je testovatelný a snadno udržovatelný
 
 ## 8. Dokumentace
-- [ ] Doplňte dokumentaci k API (jak funguje volání API, formát vstupů a výstupů)
-- [ ] Doplňte dokumentaci k metodám v repozitářích a službách
-- [ ] Přidat README soubor k projektu s instrukcemi pro nastavení a použití
+- [x] Doplňte dokumentaci k API (jak funguje volání API, formát vstupů a výstupů)
+- [x] Doplňte dokumentaci k metodám v repozitářích a službách
+- [x] Přidat README soubor k projektu s instrukcemi pro nastavení a použití
