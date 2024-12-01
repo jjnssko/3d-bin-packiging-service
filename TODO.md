@@ -25,7 +25,7 @@
 - [x] Implementovat metodu pro výpočet nejvhodnějšího boxu
     - Použít API pro výpočet
     - Validovat vstupy (produkty a konfigurace boxů)
-- [ ] Přidat fallback na jednoduchý výpočet při výpadku API
+- [x] Přidat fallback na jednoduchý výpočet při výpadku API
 
 ## 5. Práce s Doctrine Cache
 - [x] Implementovat cache pro výsledky výpočtu (uložení do databáze)
@@ -36,7 +36,8 @@
 - [ ] Napsat základní testy pro kontrolu základní funkcionality
     - Testy pro ukládání a načítání dat z databáze
     - Testy pro komunikaci s API (mockování API odpovědí)
-- [ ] Otestovat chování aplikace při výpadku externího API
+- [x] Otestovat chování aplikace při běhu externího API
+- [x] Otestovat chování aplikace při výpadku externího API
 
 ## 7. Optimalizace a Zabezpečení
 - [x] Ošetřit všechny výjimky a chyby při práci s API

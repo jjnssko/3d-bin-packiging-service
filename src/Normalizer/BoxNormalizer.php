@@ -8,7 +8,7 @@ use App\Entity\Box;
 
 class BoxNormalizer
 {
-    /** @return array<string, float|int> */
+    /** @return array{id: int, w: float, h: float, d: float, max_wg: float} */
     public static function normalizeForClient(Box $data): array
     {
         return [

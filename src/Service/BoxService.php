@@ -10,7 +10,7 @@ readonly class BoxService
 {
     public function __construct(private BoxRepository $boxRepository) {}
 
-    /** @return array<int, array<string,float|int>> */
+    /** @return array<int, array{id: int, w: float, h: float, d: float, max_wg: float}> */
     public function getBoxesForPacking(): array
     {
         $boxObjects = $this->boxRepository->findAllBoxes();

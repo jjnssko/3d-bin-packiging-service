@@ -13,7 +13,7 @@ class ProductService
      * @param array<int, array{id: int, width: float, height: float, length: float, weight: float}> $requestedProducts
      * @return array<int, array<string, int|float>>
      */
-    public function getProductsForPacking(array $requestedProducts): array
+    public function getProductsForPackingApi(array $requestedProducts): array
     {
         $normalizedProducts = [];
 

@@ -65,4 +65,15 @@ class Box
     {
         return $this->maxWeight;
     }
+
+    public function toArray(): array
+    {
+        return [
+            'id' => $this->id,
+            'width' => $this->width,
+            'height' => $this->height,
+            'length' => $this->length,
+            'maxWeight' => $this->maxWeight,
+        ];
+    }
 }
