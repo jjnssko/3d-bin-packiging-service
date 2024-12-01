@@ -23,11 +23,11 @@ The input must be a valid JSON object structured as follows:
 {
     "products": [
         {
-            "id": integer,
-            "width": float,
-            "height": float,
-            "length": float,
-            "weight": float
+            "id": "integer",
+            "width": "float",
+            "height": "float",
+            "length": "float",
+            "weight": "float"
         }
     ]
 }
