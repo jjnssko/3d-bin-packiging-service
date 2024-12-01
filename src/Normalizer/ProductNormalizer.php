@@ -8,7 +8,7 @@ class ProductNormalizer
 {
     /**
      * @param array{id: int, width: float, height: float, length: float, weight: float} $data
-     * @return array<string, float|int>
+     * @return array{id: int, w: float, h: float, d: float, wq: float}
      */
     public static function normalizeForClient(array $data): array
     {

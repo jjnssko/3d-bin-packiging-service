@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8ba7cf1064330a4095a2a7e35de3cc1",
+    "content-hash": "56e6ef34ec31c02e5f5f8f61446806c3",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1427,6 +1427,56 @@
                 }
             ],
             "time": "2024-07-18T11:15:46+00:00"
+        },
+        {
+            "name": "latuconsinafr/3d-bin-packager",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/latuconsinafr/3d-bin-packager.git",
+                "reference": "b10cd1a1a918b2bf222a630c3a1e16d64ab6e732"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/latuconsinafr/3d-bin-packager/zipball/b10cd1a1a918b2bf222a630c3a1e16d64ab6e732",
+                "reference": "b10cd1a1a918b2bf222a630c3a1e16d64ab6e732",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Latuconsinafr\\BinPackager\\BinPackager3D\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Farista Latuconsina",
+                    "email": "faristalatuconsina@gmail.com",
+                    "homepage": "https://github.com/latuconsinafr"
+                }
+            ],
+            "description": "PHP Library for 3D Bin Packing.",
+            "keywords": [
+                "2d-bin-packing",
+                "3d-bin-packing",
+                "bin-packing",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/latuconsinafr/3d-bin-packager/issues",
+                "source": "https://github.com/latuconsinafr/3d-bin-packager/tree/v1.0"
+            },
+            "time": "2021-11-29T17:49:55+00:00"
         },
         {
             "name": "phpoption/phpoption",

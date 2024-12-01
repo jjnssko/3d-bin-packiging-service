@@ -39,7 +39,7 @@ $application = new Application(
     $packingService,
     $productService,
     $boxService,
-    $responseHandler
+    $responseHandler,
 );
 $response = $application->run($request);
 

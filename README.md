@@ -81,3 +81,9 @@ The input must be a valid JSON object structured as follows:
 1. Creates an HTTP response via the ResponseHandler:
    1. 200 status with the packed box data if successful.
    2. 500 status with error details on failure.
+
+## Fallback logic
+
+Implementation of `$ composer require latuconsinafr/3d-bin-packager`
+
+Documentation is available in [package's GitHub README](https://github.com/latuconsinafr/3d-bin-packager/blob/main/README.md)
